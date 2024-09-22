@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 student_scores = {
     'Harry': 88,
     'Ron': 78,
@@ -21,4 +22,29 @@ for student in student_scores:
     else:
         student_grades[student] = 'Fail'
 
+=======
+student_scores = {
+    'Harry': 88,
+    'Ron': 78,
+    'Hermione': 95,
+    'Draco': 75,
+    'Neville': 60
+}
+
+student_grades = {}
+
+for student in student_scores:
+    print(student)
+    score = student_scores[student]
+    
+    if score > 90:
+        student_grades[student] = 'Outstanding'
+    elif score > 80:
+        student_grades[student] = 'Exceeds Expectations'
+    elif score > 70:
+        student_grades[student] = 'Acceptable'
+    else:
+        student_grades[student] = 'Fail'
+
+>>>>>>> 5869b6b (	new file:   python_practice/ch10/calculator_240908.py)
     
