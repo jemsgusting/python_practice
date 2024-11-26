@@ -13,11 +13,18 @@ class Snake:
 
     def create_snake(self):
         for position in STARTING_POSITIONS:
-            new_segment = Turtle("square")
-            new_segment.color("white")
-            new_segment.penup()
-            new_segment.goto(position) 
-            self.segments.append(new_segment)
+            self.add_segment(position)
+
+    def add_segment(self, position):
+        new_segment = Turtle("square")
+        new_segment.color("yellow")
+        new_segment.penup()
+        new_segment.goto(position) 
+        self.segments.append(new_segment)
+
+    def extend(self): # 뱀의 몸길이 증가
+        self.add_segment(self.segments[-1].position())  # [=1]은 예를 들어 인덱스에 [1,2,3]이 존재하면 거꾸로인 3부터 세는 것이다.
+
 
     def move(self):
         #거북이 위치 이동
